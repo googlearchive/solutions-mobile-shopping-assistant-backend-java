@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<datastore-indexes autoGenerate="true">
+  <datastore-index kind="CheckIn" ancestor="false" source="manual">
+    <property name="placeId" direction="asc" />
+    <property name="userEmail" direction="asc" />
+    <property name="checkinDate" direction="asc" />
+  </datastore-index>
+</datastore-indexes>

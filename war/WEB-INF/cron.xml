@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cronentries>
+  <cron>
+    <url>/admin/buildsearchindex</url>
+    <description>Build full text search index based on the latest data
+    </description>
+    <schedule>every day 5:00</schedule>
+    <timezone>America/New_York</timezone>
+  </cron>
+</cronentries>

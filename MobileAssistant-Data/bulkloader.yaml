@@ -1,0 +1,95 @@
+#!/usr/bin/python
+#
+# Copyright 2013 Google Inc. All Rights Reserved.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+python_preamble:
+- import: base64
+- import: re
+- import: google.appengine.ext.bulkload.transform
+- import: google.appengine.ext.bulkload.bulkloader_wizard
+- import: google.appengine.ext.db
+- import: google.appengine.api.datastore
+- import: google.appengine.api.users
+
+transformers:
+
+- kind: Offer
+  connector: csv
+  connector_options:
+  property_map:
+    - property: __key__
+      external_name: key
+      export_transform: transform.key_id_or_name_as_string
+
+    - property: description
+      external_name: description
+      # Type: String Stats: 2 properties of this type in this kind.
+
+    - property: title
+      external_name: title
+      # Type: String Stats: 2 properties of this type in this kind.
+
+    - property: imageUrl
+      external_name: imageUrl
+
+- kind: Place
+  connector: csv
+  connector_options:
+  property_map:
+    - property: __key__
+      external_name: key
+      export_transform: transform.key_id_or_name_as_string
+
+    - property: address
+      external_name: address
+      # Type: String Stats: 6 properties of this type in this kind.
+
+    - property: location
+      external_name: location
+      # Type: GeoPt Stats: 6 properties of this type in this kind.
+      import_transform: google.appengine.api.datastore_types.GeoPt
+
+    - property: name
+      external_name: name
+      # Type: String Stats: 6 properties of this type in this kind.
+
+    - property: placeId
+      external_name: placeId
+      # Type: String Stats: 6 properties of this type in this kind.
+
+
+- kind: Recommendation
+  connector: csv
+  connector_options:
+  property_map:
+    - property: __key__
+      external_name: key
+      export_transform: transform.key_id_or_name_as_string
+
+    - property: description
+      external_name: description
+      # Type: String Stats: 4 properties of this type in this kind.
+
+    - property: title
+      external_name: title
+      # Type: String Stats: 4 properties of this type in this kind.
+
+    - property: imageUrl
+      external_name: imageUrl
+
+    - property: expiration
+      external_name: expiration
+      import_transform: transform.import_date_time('%m/%d/%Y')
+

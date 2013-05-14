@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://java.sun.com/xml/ns/persistence
+        http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd"
+  version="1.0">
+
+  <persistence-unit name="transactions-optional">
+    <provider>org.datanucleus.api.jpa.PersistenceProviderImpl</provider>
+    <properties>
+      <property name="datanucleus.NontransactionalRead" value="true" />
+      <property name="datanucleus.NontransactionalWrite" value="true" />
+      <property name="datanucleus.ConnectionURL" value="appengine" />
+      <property name="datanucleus.appengine.datastoreEnableXGTransactions"
+        value="true" />
+      <property name="datanucleus.appengine.autoCreateDatastoreTxns"
+        value="true" />
+    </properties>
+    <class>com.google.sample.mobileassistant.CheckIn</class>
+    <class>com.google.sample.mobileassistant.DeviceInfo</class>
+    <class>com.google.sample.mobileassistant.Offer</class>
+    <class>com.google.sample.mobileassistant.Place</class>
+    <class>com.google.sample.mobileassistant.Recommendation</class>
+    <class>com.google.sample.mobileassistant.UserAccount</class>
+  </persistence-unit>
+</persistence>

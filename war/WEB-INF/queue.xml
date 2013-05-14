@@ -1,0 +1,7 @@
+<queue-entries>
+  <queue>
+    <name>recommendations-queue</name>
+    <rate>100/s</rate>
+    <bucket-size>100</bucket-size>
+  </queue>
+</queue-entries>
