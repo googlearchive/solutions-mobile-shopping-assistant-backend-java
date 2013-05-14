@@ -16,7 +16,7 @@ This sample application is not an official Google product.
 This sample source code and project is designed to work with Eclipse. It was tested with Eclipse 3.8 and Google App Engine SDK 1.7.7.1.
 
 ## Overview
-[Mobile Shopping Assistant Java Backend](https://github.com/GoogleCloudPlatform/solutions-mobile-shopping-assistant) demonstrates how to build a mobile backend that will power Android and iOS native applications and expose API using Google Cloud Endpoints.
+[Mobile Shopping Assistant Java Backend](https://github.com/GoogleCloudPlatform/solutions-mobile-shopping-assistant-backend-java) demonstrates how to build a mobile backend that will power Android and iOS native applications and expose API using Google Cloud Endpoints.
 
 ### Prerequisite
 1. Eclipse with [Google Plugin for Eclipse](https://developers.google.com/eclipse/docs/getting_started) version 3.2.3 or newer.
@@ -24,7 +24,7 @@ This sample source code and project is designed to work with Eclipse. It was tes
 2. Google App Engine SDK version 1.7.7.1 or higher.
 
 ## Download Instruction
-You can download this sample [here](https://github.com/GoogleCloudPlatform/solutions-mobile-shopping-assistant). The download contains both Android client and Java backend. After the download finishes, unzip the files and import the projects into Eclipse.
+You can download this sample [here](https://github.com/GoogleCloudPlatform/solutions-mobile-shopping-assistant-backend-java). After the download finishes, unzip the files and import the projects into Eclipse.
 
 ## Developer Guide using Eclipse
 
