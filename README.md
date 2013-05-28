@@ -23,7 +23,7 @@ This sample source code and project is designed to work with Eclipse. It was tes
 
 2. Google App Engine SDK version 1.7.7.1 or higher.
 
-<<<<<<< HEAD
+
 =======
 ## Download Instruction
 You can download this sample [here](https://github.com/GoogleCloudPlatform/solutions-mobile-shopping-assistant-backend-java). After the download finishes, unzip the files and import the projects into Eclipse.
