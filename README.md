@@ -23,8 +23,6 @@ This sample source code and project is designed to work with Eclipse. It was tes
 
 2. Google App Engine SDK version 1.7.7.1 or higher.
 
-## Download Instruction
-You can download this sample [here](https://github.com/GoogleCloudPlatform/solutions-mobile-shopping-assistant). The download contains both Android client and Java backend. After the download finishes, unzip the files and import the projects into Eclipse.
 
 ## Developer Guide using Eclipse
 
@@ -47,4 +45,3 @@ The repository does not include jars. Therefore when you open the project in Ecl
 
 
 Now you are ready to use Mobile Shopping Assistant Android client or iOS Client with the mobile backend that you deployed. Follow the steps in README.md for Android and iOS client.
-
