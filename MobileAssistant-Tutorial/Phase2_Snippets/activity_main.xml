@@ -1,0 +1,60 @@
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/OnlineShopping"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight=".3"
+            android:text="@string/onlineShopping"
+            android:textSize="10sp" />
+
+        <Button
+            android:id="@+id/MyAccount"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight=".3"
+            android:text="@string/myAccount"
+            android:textSize="10sp" />
+
+        <Button
+            android:id="@+id/CheckIn"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight=".3"
+            android:onClick="onRetrievePlaces"
+            android:text="@string/checkIn"
+            android:textSize="10sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="0.45"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/PlacesListLabel"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="3sp"
+            android:text="@string/retrievingPlaces" />
+
+        <ListView
+            android:id="@+id/PlacesList"
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+</LinearLayout>
+
+
